@@ -17,10 +17,13 @@
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views
+//= require_tree ./routers
 //= require_tree .
+    
 
+var TwitterCloneApp = TwitterCloneApp || {};
 
-
-
-
-
+$(function() {
+    TwitterCloneApp.router = new TwitterCloneApp.AppRouter();
+    Backbone.history.start();
+});
